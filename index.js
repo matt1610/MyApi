@@ -13,9 +13,7 @@ app.get('/api', function(request, response) {
 });
 
 app.get('/api/stats', function (request, response) {
-	setInterval(function () {
-  		response.send(DummyData());
-  	}, 5000);
+  	response.send(DummyData());
 })
 
 app.listen(app.get('port'), function() {
