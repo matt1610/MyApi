@@ -6,7 +6,7 @@ function DummyData () {
 	return {
 		Name : People[randomIndex].Name,
 		Surname : People[randomIndex].Surname,
-		HeartRate : RandomTwo(50,170),
+		HeartRate : GetHeartRate(30)
 		Temperature : RandomTwo(33,37),
 		Acceleration : RandomTwo(0,5),
 		Loc : People[randomIndex].Loc
@@ -15,6 +15,14 @@ function DummyData () {
 
 function RandomTwo (one, two) {
 	return Math.floor(Math.random() * two) + one;
+}
+
+function GetHeartRate (days) {
+	var Temp = [];
+	for (var i = 0; i < days; i++) {
+		Temp.push(RandomTwo(50,170));
+	};
+	return Temp;
 }
 
 var People = [
