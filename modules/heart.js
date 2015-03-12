@@ -1,25 +1,3 @@
-var express = require('express');
-var app = express();
-var mongo = require('mongodb');
-var cors = require('cors');
-var ObjectId = require('mongodb').ObjectID;
-
-app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
-app.use(cors());
-
-app.get('/api', function(request, response) {
-  	response.send('Working!');
-});
-
-app.get('/api/stats', function (request, response) {
-  	response.send(DummyData());
-})
-
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'));
-});
-
 
 
 
@@ -35,12 +13,9 @@ function DummyData () {
 	}
 }
 
-
-
 function RandomTwo (one, two) {
 	return Math.floor(Math.random() * two) + one;
 }
-
 
 var People = [
 	{
@@ -94,3 +69,9 @@ var People = [
 		}
 	}
 ]
+
+module.exports = {
+	People : People,
+	DummyData : DummyData,
+	RandomTwo : RandomTwo
+}
