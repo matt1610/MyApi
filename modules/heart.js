@@ -9,7 +9,9 @@ function DummyData () {
 		HeartRate : GetHeartRate(30),
 		Temperature : RandomTwo(33,37),
 		Acceleration : RandomTwo(0,5),
-		Loc : People[randomIndex].Loc
+		Loc : People[randomIndex].Loc,
+		Age : People[randomIndex].Age,
+		Weight : People[randomIndex].Weight
 	}
 }
 
