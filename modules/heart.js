@@ -6,7 +6,7 @@ function DummyData () {
 	return {
 		Name : People[randomIndex].Name,
 		Surname : People[randomIndex].Surname,
-		HeartRate : GetHeartRate(30)
+		HeartRate : GetHeartRate(30),
 		Temperature : RandomTwo(33,37),
 		Acceleration : RandomTwo(0,5),
 		Loc : People[randomIndex].Loc
