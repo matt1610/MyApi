@@ -33,7 +33,7 @@
 
   	.controller('MainCtrl', function($scope, $http){
 
-  		$http.post('https://bronzecam.firebaseio.com/img').then(function(data) {
+  		$http.post('https://bronzecam.firebaseio.com/img.json').then(function(data) {
   			console.log(data);
   		});
 
