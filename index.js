@@ -15,7 +15,11 @@ app.get('/api', function(request, response) {
 
 app.get('/api/stats', function (request, response) {
   	response.send(heart.DummyData());
-})
+});
+
+app.get('/bronzecam', function(request, response) {
+	response.sendfile('pages/bronzecam.html');
+});
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
