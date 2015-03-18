@@ -31,11 +31,11 @@
 
   	var BronzeCam = angular.module('BronzeCam', ['firebase'])
 
-  	.controller('MainCtrl', function($scope, $firebaseObject){
+  	.controller('MainCtrl', function($scope, $http){
 
-  		var ref = new Firebase("https://bronzecam.firebaseio.com/img");
-  		var syncObject = $firebaseObject(ref);
-  		syncObject.$bindTo($scope, "SRC");
+  		$http.post('https://bronzecam.firebaseio.com/img').then(function(data) {
+  			console.log(data);
+  		});
 
   		$scope.Start = function() {
   			console.log($scope.SRC);
